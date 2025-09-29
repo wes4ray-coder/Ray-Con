@@ -67,20 +67,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Gallery item click handling (placeholder for future lightbox functionality)
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    // Gallery item click handling with actual image modal functionality
+    const galleryItems = document.querySelectorAll('.gallery-item img');
     
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
-            // In a real implementation, this would open a lightbox with the full image
-            const placeholder = this.querySelector('.placeholder-image p');
-            if (placeholder) {
-                alert(`This would show the full ${placeholder.textContent} in a lightbox gallery.`);
-            }
+            // Create modal overlay
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            modal.innerHTML = `
+                <div class="modal-overlay" onclick="this.parentElement.remove()">
+                    <div class="modal-content">
+                        <img src="${this.src}" alt="${this.alt}" class="modal-image">
+                        <div class="modal-caption">${this.alt}</div>
+                        <span class="modal-close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</span>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            setTimeout(() => modal.classList.add('show'), 100);
         });
-        
-        // Add cursor pointer to indicate clickability
-        item.style.cursor = 'pointer';
     });
 
     // Service card hover effects (additional interactivity)
