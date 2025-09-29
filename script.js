@@ -39,15 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Basic validation
             if (!name || !phone || !message) {
-                alert('Please fill in all required fields (Name, Phone, and Project Details).');
+                showNotification('Please fill in all required fields (Name, Phone, and Project Details).', 'error');
                 return;
             }
             
-            // Simulate form submission (in a real implementation, this would send to a server)
-            alert(`Thank you, ${name}! We've received your request for ${service || 'construction services'}. We'll contact you at ${phone} within 24 hours to discuss your project.`);
+            // Show loading notification
+            showNotification('Sending your quote request...', 'loading');
             
-            // Reset form
-            this.reset();
+            // Simulate form submission delay (in a real implementation, this would send to a server)
+            setTimeout(() => {
+                showNotification(`Thank you, ${name}! We've received your request for ${service || 'construction services'}. We'll contact you at ${phone} within 24 hours to discuss your project.`, 'success');
+                
+                // Reset form after successful submission
+                this.reset();
+            }, 1500);
         });
     }
 
@@ -178,3 +183,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Enhanced notification system for better user feedback
+function showNotification(message, type = 'info') {
+    // Remove any existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-icon">${getNotificationIcon(type)}</span>
+            <span class="notification-message">${message}</span>
+            <span class="notification-close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+        </div>
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Show notification with animation
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Auto-remove notification (except for loading)
+    if (type !== 'loading') {
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentElement) {
+                        notification.remove();
+                    }
+                }, 300);
+            }
+        }, type === 'error' ? 5000 : 4000);
+    }
+}
+
+function getNotificationIcon(type) {
+    switch (type) {
+        case 'success': return '✅';
+        case 'error': return '❌';
+        case 'loading': return '⏳';
+        default: return 'ℹ️';
+    }
+}
