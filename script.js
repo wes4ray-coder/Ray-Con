@@ -22,46 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const email = formData.get('email');
-            const service = formData.get('service');
-            const message = formData.get('message');
-            
-            // Basic validation
-            if (!name || !phone || !message) {
-                alert('Please fill in all required fields (Name, Phone, and Project Details).');
-                return;
-            }
-
-            // No backend on GitHub Pages, so open a pre-filled email to Willie.
-            const subject = `Quote Request${service ? ' - ' + service : ''} from ${name}`;
-            const body =
-                `Name: ${name}\n` +
-                `Phone: ${phone}\n` +
-                `Email: ${email || 'N/A'}\n` +
-                `Service Needed: ${service || 'N/A'}\n\n` +
-                `Project Details:\n${message}\n`;
-            const mailto = `mailto:willier85@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            window.location.href = mailto;
-
-            alert(`Thanks, ${name}! Your email app will open with your request ready to send to Ray Construction & Demolition. If it doesn't, please call or text (214) 405-5621.`);
-
-            // Reset form
-            this.reset();
-        });
-    }
-
     // Header background change on scroll
     const header = document.querySelector('.header');
     
