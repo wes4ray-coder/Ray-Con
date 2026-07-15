@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            header.style.backgroundColor = 'rgba(53, 67, 61, 0.95)';
         } else {
             header.style.backgroundColor = '';
         }
