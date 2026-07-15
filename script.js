@@ -42,10 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please fill in all required fields (Name, Phone, and Project Details).');
                 return;
             }
-            
-            // Simulate form submission (in a real implementation, this would send to a server)
-            alert(`Thank you, ${name}! We've received your request for ${service || 'construction services'}. We'll contact you at ${phone} within 24 hours to discuss your project.`);
-            
+
+            // No backend on GitHub Pages, so open a pre-filled email to Willie.
+            const subject = `Quote Request${service ? ' - ' + service : ''} from ${name}`;
+            const body =
+                `Name: ${name}\n` +
+                `Phone: ${phone}\n` +
+                `Email: ${email || 'N/A'}\n` +
+                `Service Needed: ${service || 'N/A'}\n\n` +
+                `Project Details:\n${message}\n`;
+            const mailto = `mailto:willier85@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailto;
+
+            alert(`Thanks, ${name}! Your email app will open with your request ready to send to Ray Construction & Demolition. If it doesn't, please call or text (214) 405-5621.`);
+
             // Reset form
             this.reset();
         });
