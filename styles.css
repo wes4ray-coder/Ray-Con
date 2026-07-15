@@ -95,14 +95,24 @@ body {
 }
 
 .hero-content {
-    max-width: 780px;
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 60px);
+    text-align: left;
 }
 
 .hero-logo {
-    width: clamp(96px, 13vw, 140px);
+    width: clamp(130px, 18vw, 240px);
     height: auto;
-    margin-bottom: 1.2rem;
+    flex-shrink: 0;
     filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55));
+}
+
+.hero-info {
+    text-align: left;
+    min-width: 0;
 }
 
 .brand-logo {
@@ -137,21 +147,22 @@ body {
 
 .biz-tagline {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
-    font-weight: 600;
-    letter-spacing: 0.03em;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
     color: #e07b39;
     text-transform: uppercase;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.6rem;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .phone-big {
     display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    font-size: clamp(2.9rem, 7.5vw, 4.6rem);
     font-weight: 700;
     letter-spacing: 0.01em;
+    line-height: 1.05;
     color: #fff;
     text-decoration: none;
     text-shadow: 0 2px 12px rgba(0,0,0,0.7);
@@ -164,16 +175,19 @@ body {
 }
 
 .owner-line {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
     color: #fff;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.15rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .location-line {
-    font-size: 1.2rem;
-    color: #ecf0f1;
+    font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 1.8rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero-buttons {
@@ -575,17 +589,18 @@ body {
     }
     
     .hero {
+        text-align: center;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-content {
         flex-direction: column;
         text-align: center;
-        padding: 120px 20px 50px;
+        gap: 1.2rem;
     }
-    
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-image {
-        margin-top: 2rem;
+
+    .hero-info {
+        text-align: center;
     }
     
     .about-content {
