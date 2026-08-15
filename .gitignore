@@ -43,4 +43,5 @@ build/
 
 # Backup files
 *.bak
-*.backupgraphify-out/
+*.backup
+graphify-out/
