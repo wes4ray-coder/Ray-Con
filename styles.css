@@ -97,24 +97,26 @@ body {
     color: #fff;
 }
 
+/* Stacked like the job-site sign: logo on top, title banner, then details */
 .hero-content {
     max-width: 1080px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: clamp(20px, 4vw, 60px);
-    text-align: left;
+    gap: clamp(14px, 2vw, 24px);
+    text-align: center;
 }
 
 .hero-logo {
-    width: clamp(130px, 18vw, 240px);
+    width: clamp(120px, 15vw, 190px);
     height: auto;
     flex-shrink: 0;
     filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55));
 }
 
 .hero-info {
-    text-align: left;
+    text-align: center;
     min-width: 0;
 }
 
