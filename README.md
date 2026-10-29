@@ -5,7 +5,7 @@ A simple, fast, one-page site — no database, no server code.
 
 - **Live site:** http://ray-con.com
 - **Owner / contact on site:** Willie Ray · (214) 405-5621 · willier85@yahoo.com
-- **Service area:** Kaufman County &amp; surrounding areas
+- **Service area:** Kaufman, Van Zandt, Ellis &amp; Rockwall Counties (TX)
 
 ## How it's hosted
 
@@ -50,7 +50,7 @@ A simple, fast, one-page site — no database, no server code.
 - `index.html` `<head>`: title, description, canonical URL (`https://ray-con.com/`),
   link-preview tags (`og:*`, image `images/social-card.jpg` 1200x630), and
   **structured data** (the `application/ld+json` block: business name, phone,
-  hours, Kaufman County service area, services). Update it when hours/services change.
+  hours, four-county service area, services). Update it when hours/services change.
 - `sitemap.xml` (the page + gallery photos) and `robots.txt` (points Google at the sitemap).
 - **Google Search Console:** verified as a *Domain* property through Cloudflare (DNS),
   so no verification tag is needed in the HTML. Don't delete the `google-site-verification`
