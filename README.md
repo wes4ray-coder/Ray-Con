@@ -52,8 +52,9 @@ A simple, fast, one-page site — no database, no server code.
   **structured data** (the `application/ld+json` block: business name, phone,
   hours, Kaufman County service area, services). Update it when hours/services change.
 - `sitemap.xml` (the page + gallery photos) and `robots.txt` (points Google at the sitemap).
-- **Google Search Console:** the verification `<meta name="google-site-verification" …>`
-  tag goes on the marked line in `<head>`. Then submit `https://ray-con.com/sitemap.xml`.
+- **Google Search Console:** verified as a *Domain* property through Cloudflare (DNS),
+  so no verification tag is needed in the HTML. Don't delete the `google-site-verification`
+  TXT record in Cloudflare DNS. Sitemap submitted as `https://ray-con.com/sitemap.xml`.
 - Photos are resized/compressed for speed (gallery 800px wide). Shrink new phone photos
   the same way before adding them.
 
