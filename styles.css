@@ -221,53 +221,6 @@ body {
     color: #35433d;
 }
 
-/* Google Section */
-.google {
-    padding: 70px 0;
-    background: #eef1ef;
-}
-
-.google-card {
-    max-width: 760px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 12px;
-    border-top: 5px solid #d4451f;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-}
-
-.google h2 {
-    color: #35433d;
-    margin-bottom: 0.6rem;
-}
-
-.google-subtitle {
-    font-size: 1.15rem;
-    color: #555;
-    margin-bottom: 1.8rem;
-}
-
-.google-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn.btn-outline {
-    background: transparent;
-    color: #35433d;
-    border: 2px solid #35433d;
-    padding: 10px 28px;
-}
-
-.btn.btn-outline:hover {
-    background: #35433d;
-    color: #fff;
-}
-
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -702,6 +655,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* stacked hero buttons: same width */
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
     /* five menu links must fit on the smallest phones (320px) */
     .nav-links {
         gap: 0.7rem;
@@ -715,7 +674,6 @@ body {
     .services h2,
     .about h2,
     .gallery h2,
-    .google h2,
     .contact h2 {
         font-size: 2rem;
     }
@@ -734,7 +692,6 @@ body {
 .services h2,
 .about h2,
 .gallery h2,
-.google h2,
 .contact h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
