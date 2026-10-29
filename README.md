@@ -55,6 +55,9 @@ A simple, fast, one-page site — no database, no server code.
 - **Google Search Console:** verified as a *Domain* property through Cloudflare (DNS),
   so no verification tag is needed in the HTML. Don't delete the `google-site-verification`
   TXT record in Cloudflare DNS. Sitemap submitted as `https://ray-con.com/sitemap.xml`.
+- **AI answers (Google AI Overviews, Gemini, ChatGPT, etc.):** the "Common Questions"
+  section (`#faq`) plus its `FAQPage` data block answer what people ask; `llms.txt` is a
+  plain-text business summary some AI tools read. Keep all three in sync with the site.
 - Photos are resized/compressed for speed (gallery 800px wide). Shrink new phone photos
   the same way before adding them.
 
