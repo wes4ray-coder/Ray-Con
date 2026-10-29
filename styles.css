@@ -324,6 +324,13 @@ body {
     margin-bottom: 1rem;
 }
 
+/* custom drawn icons (no emoji exists for them), sized to match the emoji */
+.service-icon img {
+    width: 3.6rem;
+    height: 3.6rem;
+    vertical-align: middle;
+}
+
 .service-card h3 {
     font-size: 1.5rem;
     color: #35433d;
