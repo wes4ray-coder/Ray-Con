@@ -460,7 +460,8 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* minmax(0, …) so wide content (the one-line phone number) can't push a column off-screen */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 3rem;
 }
 
@@ -486,7 +487,8 @@ body {
 }
 
 .phone-cta {
-    font-size: 2.4rem;
+    /* shrinks with the screen so it fits inside the box on one line */
+    font-size: clamp(1.3rem, 7vw, 2.4rem);
     margin: 0.5rem 0 1.4rem;
 }
 
@@ -636,7 +638,11 @@ body {
     }
     
     .contact-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-cta {
+        padding: 2rem 1.1rem;
     }
     
     .features {
@@ -649,6 +655,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* five menu links must fit on the smallest phones (320px) */
+    .nav-links {
+        gap: 0.7rem;
+        font-size: 0.95rem;
+    }
+
     .hero-content h2 {
         font-size: 2rem;
     }
