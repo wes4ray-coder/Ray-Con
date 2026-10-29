@@ -29,9 +29,13 @@ A simple, fast, one-page site — no database, no server code.
 
 ## Design notes
 
-- **Logo:** `images/logo.svg` — a vector excavator + "earth layers" emblem in
-  terracotta. Scales to any size; edit the SVG to change it.
-  Note: if you edit the SVG, keep any `&` written as `&amp;` or the file won't load.
+- **Logo (master copy):** `images/logo.svg` — the red-diamond italic "R" from the
+  job-site sign, redrawn from scratch as a vector (brand red `#d4451f`, white R).
+  This SVG is the master: it scales to any size (signs, shirts, cards).
+  - `images/logo-knockout.svg` — same mark with a see-through R (for light backgrounds/print).
+  - `images/logo-1024.png`, `images/logo-knockout-1024.png` — transparent PNG exports.
+  - `favicon.png` (64px) and `apple-touch-icon.png` (180px) — browser/phone icons.
+  If you edit the SVG, re-export the PNGs from it (any SVG tool or a browser screenshot).
 - **Fonts** (loaded from Google Fonts in `index.html`):
   Cinzel (the big "RAY" wordmark, matches Willie's business card),
   Barlow Condensed (headings + phone number), Barlow (body text).
