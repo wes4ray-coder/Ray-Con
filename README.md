@@ -1,6 +1,6 @@
-# Ray Construction &amp; Demolition — ray-con.com
+# Ray Excavation &amp; Demolition — ray-con.com
 
-The website for **Ray Construction &amp; Demolition** (owner: Willie Ray).
+The website for **Ray Excavation &amp; Demolition** (owner: Willie Ray).
 A simple, fast, one-page site — no database, no server code.
 
 - **Live site:** http://ray-con.com
