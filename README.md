@@ -37,8 +37,11 @@ A simple, fast, one-page site — no database, no server code.
   - `favicon.png` (64px) and `apple-touch-icon.png` (180px) — browser/phone icons.
   If you edit the SVG, re-export the PNGs from it (any SVG tool or a browser screenshot).
 - **Fonts** (loaded from Google Fonts in `index.html`):
-  Cinzel (the big "RAY" wordmark, matches Willie's business card),
-  Barlow Condensed (headings + phone number), Barlow (body text).
+  Saira heavy italic (the "RAY EXCAVATION / & DEMOLITION" title, header name and
+  phone number, matching the job-site sign), Barlow Condensed (headings),
+  Barlow (body text).
+- **Hero title** mirrors the sign: orange `RAY EXCAVATION`, then an orange band
+  (`#d4451f`, the logo red) with white `& DEMOLITION` (`.brand-ray` / `.brand-sub`).
 - **Theme colors** (in `styles.css`): terracotta `#e07b39` / `#c25e22`,
   slate `#35433d` / `#47564e`, dark footer `#232c27`.
 
