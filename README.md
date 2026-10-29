@@ -45,6 +45,18 @@ A simple, fast, one-page site — no database, no server code.
 - **Theme colors** (in `styles.css`): terracotta `#e07b39` / `#c25e22`,
   slate `#35433d` / `#47564e`, dark footer `#232c27`.
 
+## SEO (how Google finds the site)
+
+- `index.html` `<head>`: title, description, canonical URL (`https://ray-con.com/`),
+  link-preview tags (`og:*`, image `images/social-card.jpg` 1200x630), and
+  **structured data** (the `application/ld+json` block: business name, phone,
+  hours, Kaufman County service area, services). Update it when hours/services change.
+- `sitemap.xml` (the page + gallery photos) and `robots.txt` (points Google at the sitemap).
+- **Google Search Console:** the verification `<meta name="google-site-verification" …>`
+  tag goes on the marked line in `<head>`. Then submit `https://ray-con.com/sitemap.xml`.
+- Photos are resized/compressed for speed (gallery 800px wide). Shrink new phone photos
+  the same way before adding them.
+
 ## Common updates (how-to)
 
 **Change the phone number** — in `index.html`, search for `2144055621` (in the

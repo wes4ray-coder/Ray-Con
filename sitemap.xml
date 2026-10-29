@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ray-con.com/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <image:image><image:loc>https://ray-con.com/images/about.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-1.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-3.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-4.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-5.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ray-con.com/images/work-6.jpg</image:loc></image:image>
+  </url>
+</urlset>
