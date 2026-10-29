@@ -5,7 +5,7 @@ A simple, fast, one-page site — no database, no server code.
 
 - **Live site:** http://ray-con.com
 - **Owner / contact on site:** Willie Ray · (214) 405-5621 · willier85@yahoo.com
-- **Service area:** Dallas &amp; surrounding areas
+- **Service area:** Kaufman County &amp; surrounding areas
 
 ## How it's hosted
 
