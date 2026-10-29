@@ -326,7 +326,7 @@ body {
 
 /* custom drawn icons (no emoji exists for them), sized to match the emoji */
 .service-icon img {
-    width: 3.6rem;
+    width: auto;
     height: 3.6rem;
     vertical-align: middle;
 }
