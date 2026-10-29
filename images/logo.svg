@@ -9,8 +9,9 @@
   </defs>
   <g clip-path="url(#diamond)">
     <rect x="0" y="0" width="600" height="600" fill="#d4451f"/>
-    <!-- R body: top bar + round bowl, italic stem, diagonal leg; runs off the diamond edges -->
-    <path fill="#ffffff" fill-rule="evenodd" d="M155 154 H363 A109 109 0 0 1 363 372 H330 L570 600 H409 L195 397 L134 600 H21 Z
+    <!-- R body: top bar + round bowl, italic stem, diagonal leg; runs off the diamond edges.
+         Scaled to 88% (top-left corner kept on the diamond edge) — change scale() to resize the R. -->
+    <path transform="translate(282 282) scale(0.88) translate(-300 -300)" fill="#ffffff" fill-rule="evenodd" d="M155 154 H363 A109 109 0 0 1 363 372 H330 L570 600 H409 L195 397 L134 600 H21 Z
              M241 245 H340 Q360 245 360 265 V270 Q360 286 344 290 L212 342 Z"/>
   </g>
 </svg>

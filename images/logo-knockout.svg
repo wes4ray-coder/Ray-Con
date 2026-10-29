@@ -3,7 +3,7 @@
   <defs>
     <mask id="r-knockout" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="600">
       <rect width="600" height="600" fill="#fff"/>
-      <path fill="#000" fill-rule="evenodd" d="M155 154 H363 A109 109 0 0 1 363 372 H330 L570 600 H409 L195 397 L134 600 H21 Z
+      <path transform="translate(282 282) scale(0.88) translate(-300 -300)" fill="#000" fill-rule="evenodd" d="M155 154 H363 A109 109 0 0 1 363 372 H330 L570 600 H409 L195 397 L134 600 H21 Z
                M241 245 H340 Q360 245 360 265 V270 Q360 286 344 290 L212 342 Z"/>
     </mask>
   </defs>
